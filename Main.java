@@ -32,7 +32,7 @@ public class Main {
             System.out.println("5. Mostrar informacion final");
             System.out.println("0. Salir");
             System.out.print("Seleccione una opcion: ");
-            opcion = teclado.nextInt();  // 🔹 cambiado
+            opcion = teclado.nextInt();  
 
             switch (opcion) {
                 case 1:
