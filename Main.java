@@ -41,7 +41,7 @@ public class Main {
 
                 case 2:
                     System.out.print("Ingrese cantidad de alimento: ");
-                    double cantidad = teclado.nextDouble(); // 🔹 cambiado
+                    double cantidad = teclado.nextDouble(); 
                     mascota.alimentar(cantidad);
                     break;
 
@@ -67,6 +67,6 @@ public class Main {
 
         } while (opcion != 0);
 
-        teclado.close(); // 🔹 cambiado
+        teclado.close(); 
     }
 }
