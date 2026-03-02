@@ -7,6 +7,10 @@ public class Mascota {
     private double peso;
     private boolean vacunado;
 
+    //constructor vacio
+    public Mascota() {
+    }
+
     // CONSTRUCTOR CON PARAMETROS
     public Mascota(String nombre, String especie, int edad, double peso) {
         this.nombre = nombre;
@@ -14,38 +18,6 @@ public class Mascota {
         this.edad = edad;
         this.peso = peso;
         this.vacunado = false; // siempre empieza en falso
-    }
-
-    // 1. Vacunar
-    public void vacunar() {
-        vacunado = true;
-        System.out.println("La mascota ha sido vacunada.");
-    }
-
-    // 2. Alimentar
-    public void alimentar(double cantidad) {
-        if (cantidad > 0) {
-            peso += cantidad;
-            System.out.println("La mascota fue alimentada.");
-        } else {
-            System.out.println("No se permiten cantidades negativas.");
-        }
-    }
-
-    // 3. Cumplir años
-    public void cumplirAnios() {
-        edad++;
-        System.out.println("La mascota ha cumplido un año más.");
-    }
-
-    // 4. Mostrar información
-    public void mostrarInfo() {
-        System.out.println("\n----- Información de la Mascota -----");
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Especie: " + especie);
-        System.out.println("Edad: " + edad);
-        System.out.println("Peso: " + peso + " kg");
-        System.out.println("Vacunado: " + vacunado);
     }
 
     // GETTERS Y SETTERS
@@ -89,4 +61,48 @@ public class Mascota {
     public void setVacunado(boolean vacunado) {
         this.vacunado = vacunado;
     }
+    //to string
+    @Override
+    public String toString() {
+        return "Mascota{" +
+                "nombre='" + nombre + '\'' +
+                ", especie='" + especie + '\'' +
+                ", edad=" + edad +
+                ", peso=" + peso +
+                ", vacunado=" + vacunado +
+                '}';
+    }
+    //Metodos
+    // 1. Vacunar
+    public void vacunar() {
+        vacunado = true;
+        System.out.println("La mascota ha sido vacunada.");
+    }
+
+    // 2. Alimentar
+    public void alimentar(double cantidad) {
+        if (cantidad > 0) {
+            peso += cantidad;
+            System.out.println("La mascota fue alimentada.");
+        } else {
+            System.out.println("No se permiten cantidades negativas.");
+        }
+    }
+
+    // 3. Cumplir años
+    public void cumplirAnios() {
+        edad++;
+        System.out.println("La mascota ha cumplido un año más.");
+    }
+
+    // 4. Mostrar información
+    public void mostrarInfo() {
+        System.out.println("\n----- Información de la Mascota -----");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Especie: " + especie);
+        System.out.println("Edad: " + edad);
+        System.out.println("Peso: " + peso + " kg");
+        System.out.println("Vacunado: " + vacunado);
+    }
+
 }
